@@ -21,7 +21,7 @@
   */
 }
 
-/* @media (prefers-color-scheme: light) {
+@media (prefers-color-scheme: light) {
   :root {
     --bg-color: #fff1f7;
     background-color: var(--bg-color);
@@ -33,4 +33,7 @@
     --header-sub-color: var(--text-color);
     --shadow: var(--decor-back);
   }
-} */
+}
+.page.theme_auto {
+  background-image: none;
+}
