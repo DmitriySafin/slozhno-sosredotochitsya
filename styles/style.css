@@ -208,7 +208,7 @@
 }
 .fish__list {
   display: grid;
-  gap: 20px;
+  gap: 17px;
 }
 .fish__subtitle-text {
   font-size: inherit;
@@ -220,7 +220,7 @@
 /* 2 Конец секции с текстом, секция о том что снижает внимание. мобильная версия на 375px */
 /* Галерея  на 375px */
 .picture {
-  padding: 0 10px;
+  padding: 11px 10px;
   display: grid;
   gap: 7px;
 }
