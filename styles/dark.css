@@ -5,6 +5,7 @@
 */
 
 .page.theme_dark {
+  --back-image: url(../images/cover-image-dark.png);
   --bg-color: #000028;
   --font: "IBM Plex Mono", sans-serif;
   --accent-color: #ff0070;
@@ -20,6 +21,7 @@
 }
 @media (prefers-color-scheme: dark) {
   :root {
+    --back-image: url(../images/cover-image-dark.png);
     --bg-color: #000028;
     --font: "IBM Plex Mono", sans-serif;
     --accent-color: #ff0070;

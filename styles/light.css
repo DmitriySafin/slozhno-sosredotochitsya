@@ -5,7 +5,7 @@
 */
 
 .page.theme_light {
-  background-image: none;
+  --back-image: none;
   --bg-color: #fff1f7;
   background-color: var(--bg-color);
   --accent-color: #fff1f7;
@@ -23,6 +23,7 @@
 
 @media (prefers-color-scheme: light) {
   :root {
+    --back-image: none;
     --bg-color: #fff1f7;
     background-color: var(--bg-color);
     --accent-color: #fff1f7;

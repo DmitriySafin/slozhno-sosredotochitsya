@@ -12,4 +12,5 @@
   --main--title-color: var(--accent-color);
   --header-sub-color: var(--bg-color);
   --shadow: var(--accent-color);
+  --back-image: url(../images/cover-image-dark.png);
 }
