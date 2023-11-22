@@ -34,6 +34,3 @@
     --shadow: var(--decor-back);
   }
 }
-.page.theme_auto {
-  background-image: none;
-}
