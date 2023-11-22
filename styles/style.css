@@ -377,6 +377,9 @@
     row-gap: 77px;
   }
   .picture {
-    margin-block-start: 0;
+    margin-block-start: 15px;
+  }
+  .footer {
+    inset-block-start: 65px;
   }
 }
