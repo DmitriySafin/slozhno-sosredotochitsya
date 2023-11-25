@@ -8,6 +8,7 @@
   --accent-color: #ff0070;
   --text-color: #f1b2ce;
   --title-color: #db00ff;
+  --txt-shadow: var(--accent-color);
   --decor-back: var(--accent-color);
   --main--title-color: var(--accent-color);
   --header-sub-color: var(--bg-color);

@@ -17,8 +17,8 @@
   grid-template-rows: repeat(3, min-content);
   padding: clamp(10px, 0.0286rem + 2.5445vw, 20px);
   align-items: start;
-  padding-bottom: 103px;
-  min-block-size: 100vh;
+  block-size: 100vh;
+  min-block-size: 668px;
 }
 .decorated-zone {
   position: relative;
@@ -39,7 +39,7 @@
   inline-size: 25px;
   block-size: 25px;
   inset-inline-start: 10px;
-  inset-block-end: 48px;
+  inset-block-end: 10px;
   border-bottom: 1px solid var(--main--title-color);
   border-left: 1px solid var(--main--title-color);
 }
@@ -57,6 +57,7 @@
 .header__rec-decoration::after {
   content: "";
   position: absolute;
+  inset-block-start: 7px;
   inset-inline-start: 41px;
   display: block;
   inline-size: 9px;
@@ -67,9 +68,9 @@
 }
 
 .header__theme-menu {
-  margin-inline-end: 13px;
-  margin-block-start: 17vw; /* 65px */
-  margin-block-end: 19vw; /* 75px */
+  margin-inline-end: 6px;
+  margin-block-start: 17.4vw; /* 65px */
+  margin-block-end: 18vw;
   justify-self: end;
 }
 .header__theme-menu-list {
@@ -108,7 +109,7 @@
 .header__title {
   color: var(--title-color);
   font-size: clamp(7.5rem, 0.5625rem + 14.4531vw, 9.8125rem);
-  text-shadow: 4px 4px 0px var(--accent-color);
+  text-shadow: 4px 4px 0px var(--txt-shadow);
   font-weight: 700;
   line-height: 82.5%;
   margin-block-end: 13.86vw; /* 52px */
@@ -123,7 +124,8 @@
 .main {
   display: flex;
   flex-direction: column;
-  row-gap: 37px;
+  row-gap: 48px;
+  margin-block-start: 40px;
   margin-block-end: 20px;
 }
 /* 1 секция с текстом, секция о том как сложно сосредоточиться. мобильная версия на 375px*/
@@ -140,17 +142,18 @@
 }
 .concentrate__list {
   display: grid;
-  gap: 14px;
+  gap: 20px;
 }
 .card {
   display: flex;
   flex-direction: column;
-  gap: 10px;
+  gap: 11px;
 }
 .card__text {
   color: var(--text-color);
 }
 .title-decor {
+  font-size: 1em;
   color: var(--header-sub-color);
   background-color: var(--decor-back);
   font-weight: 700;
@@ -183,13 +186,11 @@
   display: grid;
   gap: 14px;
 }
-.main__attention {
-  margin-block-start: 11px;
-}
 
 .attention__list {
   display: grid;
   gap: 20px;
+  margin-block-start: 6px;
 }
 /* 2 Конец секции с текстом, секция о том что снижает внимание. мобильная версия на 375px*/
 
@@ -198,17 +199,15 @@
   display: grid;
   gap: 14px;
 }
-.main__fish {
-  margin-block-start: 7px;
-}
 .fish__grid-container {
+  padding-block-start: 5px;
   display: flex;
   flex-direction: column;
   row-gap: 20px;
 }
 .fish__list {
   display: grid;
-  gap: 17px;
+  gap: 19px;
 }
 .fish__subtitle-text {
   font-size: inherit;
@@ -220,7 +219,7 @@
 /* 2 Конец секции с текстом, секция о том что снижает внимание. мобильная версия на 375px */
 /* Галерея  на 375px */
 .picture {
-  padding: 11px 10px;
+  padding: 1px 10px;
   display: grid;
   gap: 7px;
 }
@@ -232,7 +231,8 @@
 /* Подвал сайта на 375px */
 .footer {
   position: relative;
-  min-block-size: 100vh;
+  block-size: 100vh;
+  min-block-size: 668px;
   display: flex;
   justify-content: center;
   align-items: center;
@@ -244,7 +244,7 @@
   inline-size: 25px;
   block-size: 25px;
   inset-inline-start: 10px;
-  inset-block-end: 48px;
+  inset-block-end: 3px;
   border-bottom: 1px solid var(--main--title-color);
   border-left: 1px solid var(--main--title-color);
 }
@@ -253,12 +253,13 @@
   position: absolute;
   inline-size: 25px;
   block-size: 25px;
-  inset-block-start: 9px;
+  inset-block-start: 18px;
   inset-inline-end: 10px;
   border-top: 1px solid var(--main--title-color);
   border-right: 1px solid var(--main--title-color);
 }
 .footer__title {
+  margin-block-start: 15px;
   color: var(--title-color);
   font-size: clamp(7.5rem, 0.5625rem + 14.4531vw, 9.8125rem);
   text-shadow: 4px 4px 0px var(--accent-color);
@@ -276,8 +277,20 @@
     margin-block-end: 21.3542vw;
   }
   .header {
+    min-block-size: 1024px;
     padding-inline-start: 0;
-    padding-bottom: 244px;
+  }
+  .decorated-zone::after {
+    inset-block-start: 979px;
+    inset-inline-start: 21px;
+  }
+  .decorated-zone::before {
+    inset-block-start: 18px;
+    inset-inline-end: 18px;
+  }
+  .header__rec-decoration {
+    inset-inline-end: 48px;
+    inset-block-start: 20px;
   }
   .header__theme-menu {
     margin-block-start: 22.526vw; /* 173px */
@@ -295,21 +308,42 @@
 
   /* Начало блока секции о том как сложно сосредоточиться. Версия под планшет 768px */
   .main {
+    margin-block-start: 60px;
     padding: 0 10px;
     row-gap: 65px;
   }
   .concentrate {
     grid-template-columns: clamp(14.75rem, -0.0625rem + 30.8594vw, 19.6875rem) 1fr;
   }
+  .concentrate__list {
+    gap: 20px;
+  }
   .title {
     inline-size: clamp(14.75rem, -0.0625rem + 30.8594vw, 19.6875rem);
   }
   /* Конец блока секции о том как сложно сосредоточиться. Версия под планшет 768px */
-
+  .attention {
+    gap: 19px;
+  }
+  .main__attention {
+    margin-block-start: 13px;
+  }
+  .attention__list {
+    margin-block-start: 0;
+  }
   /* 3 Секция с текстом про память как у золотой рыбки */
   .fish {
     grid-template-columns: clamp(14.75rem, -0.0625rem + 30.8594vw, 19.6875rem) 1fr;
-    row-gap: 20px;
+    gap: 20px;
+  }
+  .main__fish {
+    margin-block-start: 13px;
+  }
+  .fish__grid-container {
+    padding-block-start: 0;
+  }
+  .fish__list {
+    gap: 19px;
   }
   /* 3 Конец Секции с текстом про память как у золотой рыбки */
   /* Секция с Картинками под планшет 768px */
@@ -318,7 +352,7 @@
     display: grid;
     grid-template-columns: repeat(3, 1fr);
     gap: 20px;
-    margin-block-start: 42px;
+    margin-block-start: 14px;
   }
   .picture__images {
     display: block;
@@ -344,11 +378,39 @@
   }
   /*Конец Секции с Картинками под планшет 768px */
   /* Подвал под планшет на 768px */
+  .footer {
+    min-block-size: 1024px;
+  }
+  .footer::before {
+    inset-block-start: 60px;
+    inset-inline-end: 20px;
+  }
+  .footer::after {
+    inset-inline-start: 20px;
+    inset-block-start: 1019px;
+    inset-block-end: 0;
+  }
+  .footer__title {
+    margin-block-start: 80px;
+  }
 }
 /* Начало блока Header нетбук версия на 1024px*/
 @media (width >= 1024px) {
   .header {
-    padding-bottom: 193px;
+    block-size: 100vh;
+    min-block-size: 768px;
+  }
+  .header__rec-decoration {
+    inset-inline-end: 48px;
+    inset-block-start: 21px;
+  }
+  .decorated-zone::before {
+    inset-block-start: 19px;
+    inset-inline-end: 20px;
+  }
+  .decorated-zone::after {
+    inset-block-start: 723px;
+    inset-inline-start: 20px;
   }
   .header__theme-menu {
     justify-self: center;
@@ -363,23 +425,31 @@
     margin-block-end: 114px;
   }
   /* Конец блока Header нетбук версия на 1024px*/
+  .concentrate {
+    margin-block-start: 59px;
+  }
   .main {
+    margin-block-start: 0;
     row-gap: 55px;
   }
   .main__fish {
-    margin-block-start: 27px;
+    margin-block-start: 24px;
   }
   .main__attention {
-    margin-block-start: 28px;
+    margin-block-start: 25px;
   }
   .attention__list {
     grid-template-columns: repeat(3, 1fr);
     row-gap: 77px;
   }
   .picture {
-    margin-block-start: 15px;
+    margin-block-start: 24px;
   }
   .footer {
-    inset-block-start: 65px;
+    block-size: 100vh;
+    min-block-size: 768px;
+  }
+  .footer::after {
+    inset-block-start: 763px;
   }
 }
