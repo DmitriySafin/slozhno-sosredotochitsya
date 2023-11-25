@@ -160,7 +160,7 @@
   line-height: 130%;
 }
 .shadow-decor {
-  text-shadow: 2px 2px 0 var(--shadow);
+  text-shadow: 2px 2px 0 var(--txt-shadow);
 }
 .card__text-link {
   color: var(--text-color);
