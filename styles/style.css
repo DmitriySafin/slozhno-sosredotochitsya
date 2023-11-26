@@ -232,7 +232,7 @@
 .footer {
   position: relative;
   block-size: 100vh;
-  min-block-size: 688px;
+  min-block-size: 668px;
   display: flex;
   justify-content: center;
   align-items: center;
@@ -244,7 +244,7 @@
   inline-size: 25px;
   block-size: 25px;
   inset-inline-start: 10px;
-  inset-block-end: 23px;
+  inset-block-end: 3px;
   border-bottom: 1px solid var(--main--title-color);
   border-left: 1px solid var(--main--title-color);
 }
@@ -264,6 +264,7 @@
   text-shadow: 4px 4px 0px var(--txt-shadow);
   font-weight: 700;
   line-height: 82.5%;
+  margin-block-start: 16px;
 }
 /* Конец секции с подвалом сайта на 375px */
 
@@ -378,6 +379,7 @@
   /*Конец Секции с Картинками под планшет 768px */
   /* Подвал под планшет на 768px */
   .footer {
+    block-size: 100vh;
     min-block-size: 1064px;
   }
   .footer::before {
